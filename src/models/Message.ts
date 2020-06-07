@@ -42,7 +42,6 @@ SCHEMA.set("toJSON", {
 
     delete ret._id;
     delete ret.__v;
-    delete ret.messenger_id;
 
     return ret;
   },
@@ -66,3 +65,37 @@ SCHEMA.virtual("user", {
 const Message = model<Message.SCHEMA, Message.MODEL>("Message", SCHEMA);
 
 export default Message;
+
+/**
+ * @swagger
+ *
+ * definitions:
+ *
+ *   Message:
+ *     allOf:
+ *       - $ref: "#/definitions/DBItem"
+ *       - type: object
+ *         required:
+ *           - messenger_id
+ *           - text
+ *         properties:
+ *           messenger_id:
+ *             type: string
+ *             example: "1234567890"
+ *           text:
+ *             type: string
+ *             example: "Hello"
+ *           user:
+ *             $ref: "#/definitions/User"
+ *
+ * parameters:
+ *
+ *   message_id_parameter:
+ *     in: path
+ *     name: message_id
+ *     description: "The message id"
+ *     required: true
+ *     schema:
+ *       type: string
+ *       example: "a1b2c3d"
+ */

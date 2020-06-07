@@ -9,6 +9,8 @@
     "lint": "eslint \"src/**/*.ts\"",
     "lint:fix": "npm run lint -- --fix",
     "tunnel": "lt --port 3000",
+    "swagger": "swagger-jsdoc -d ./swagger.config.js -o ./swagger.json './src/models/**/*.ts' './src/controllers/**/*.ts'",
+    "document": "npm run swagger && redoc-cli serve ./swagger.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -48,6 +50,8 @@
     "@typescript-eslint/parser": "^3.1.0",
     "eslint": "^7.2.0",
     "localtunnel": "^2.0.0",
+    "redoc-cli": "^0.9.8",
+    "swagger-jsdoc": "^4.0.0",
     "typescript": "^3.9.5"
   },
   "_moduleAliases": {
