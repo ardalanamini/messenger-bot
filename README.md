@@ -1,5 +1,7 @@
 # messenger-bot
 
+<img alt="demo" src="./demo.gif" width="270" height="480">
+
 ## Table of Contents
 
 - [Installation](#installation)
