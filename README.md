@@ -10,6 +10,8 @@
     - [Docker](#docker)
     - [Tunneling](#tunneling)
 - [Documents](#documents)
+- [Tests](#tests)
+    - [Coverage](#coverage)
 
 ### Installation
 
@@ -70,3 +72,15 @@ npm run document
 ```
 
 After running the command, go to [http://localhost:8080](http://localhost:8080) on your preferred browser
+
+### Tests
+
+```shell script
+npm test
+```
+
+#### Coverage
+
+```shell script
+npm run coverage
+```

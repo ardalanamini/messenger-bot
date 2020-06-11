@@ -11,4 +11,4 @@ export const BOT_ID = process.env.BOT_ID!;
 export const BOT_SECRET = process.env.BOT_SECRET!;
 export const BOT_PAGE_ID = process.env.BOT_PAGE_ID!;
 export const BOT_PAGE_TOKEN = process.env.BOT_PAGE_TOKEN!;
-export const BOT_VERIFY_TOKEN = process.env.BOT_VERIFY_TOKEN!;
+export const BOT_VERIFY_TOKEN = process.env.BOT_VERIFY_TOKEN ?? "test_verify_token";

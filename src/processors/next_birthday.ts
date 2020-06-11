@@ -28,7 +28,7 @@ export default async function next_birthday(user: User.SCHEMA, message: { [key: 
         user.messenger_id,
         `There are ${diff} days left until your next birthday`,
       );
-  } else if (/(nope|no|nah)/i.test(answer)) {
+  } else if (/^(nope|no|nah)$/i.test(answer)) {
     await messenger
       .text(
         user.messenger_id,

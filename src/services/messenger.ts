@@ -1,8 +1,10 @@
+/* istanbul ignore file */
+
 import { config } from "@bot/utils";
 import Axios from "axios";
 
 const AXIOS = Axios.create({
-  baseURL: "https://graph.facebook.com/v2.6",
+  baseURL: "https://graph.facebook.com/v7.0",
   headers: {
     "Content-Type": "application/json",
   },

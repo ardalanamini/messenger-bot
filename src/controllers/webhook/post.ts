@@ -8,8 +8,6 @@ const CONTROLLER: RequestHandler = async function post(req, res) {
 
   // Checking for page subscription.
   if (body.object === "page") {
-    res.sendStatus(200);
-
     // Iterate over each entry, there can be multiple entries if callbacks are batched.
     for (const entry of body.entry) {
       // Iterate over each messaging event
@@ -47,6 +45,10 @@ const CONTROLLER: RequestHandler = async function post(req, res) {
         }
       }
     }
+
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(404);
   }
 };
 
